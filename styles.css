@@ -3,5 +3,20 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 00 16px;
 }
 
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.texe-group h2,
+.texe-group p {
+    margin: 0;
+}
