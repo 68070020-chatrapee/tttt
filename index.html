@@ -1,35 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>it68070020</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
+
 <body>
     <nav>
         <p>68070020</p>
-        <h2>ITF WEBsite</h2>
-        <p>WEEK14</p>
+        <h2>ITF Website</h2>
+        <p>Week 14</p>
     </nav>
+
     <div class="container">
-        <img src="black_leopard.PNG" width="96" alt="cat">
-        <div class="text-group"> 
+        <img src="black_leopard.png" width="96" alt="cat">
+        <div class="text-group">
             <h2>ITF Simple Bank</h2>
             <p>Welcome to my first HTML + CSS + JS website!</p>
         </div>
     </div>
+
     <hr>
+
     <div class="boxs">
-        <textarea id="box">1. this web is so hard for me TT</textarea>
+        <textarea id="outputBox">1, Current account balance: 1000, Current cash balance: 1000</textarea>
     </div>
-    <script src="script.js"></script>
+
     <div class="lowwer">
-        <h2>Acount Overview</h2>
+        <div class="toptext">
+            <h2>Account Overview</h2>
+            <h2>Financial Tools</h2>
+        </div>
+
         <div class="b1">
-            <img src="safe.png" width="96">
+            <!-- Left Side -->
+            <div class="b1left">
+                <!-- Account Information -->
+                <div class="b1lefttop">
+                    <img src="safe.png" width="96">
+                    <div class="textb">
+                        <h3>Account Information</h3>
+                        <p>Name: Chatrapee Samutket</p>
+                        <p>Type: Savings Account</p>
+                    </div>
+                </div>
+
+                <!-- Balance Information -->
+                <div class="b1leftmid">
+                    <img src="graph.png" width="96">
+                    <div class="textc">
+                        <h3>Balance Information</h3>
+                        <p>Current account balance:</p>
+                        <input type="number" id="current-account" value="1000">
+                        <p>Current cash balance:</p>
+                        <input type="number" id="current-cash" value="1000">
+                        <button onclick="updateBalance()">Change</button>
+                    </div>
+                </div>
+
+                <!-- Bank Operation -->
+                <div class="b1leftbottom">
+                    <img src="frog.png" width="96">
+                    <div class="textd">
+                        <h3>Bank Operation</h3>
+                        <select id="operation">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="amount" value="0">
+                        <button onclick="processOperation()">Proceed</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="b1right">
+                <img src="Furious.png" width="96">
+                <div class="texte">
+                    <h3>Currency Converter</h3>
+                    <p>Input balance:</p>
+                    <input type="number" id="inputBalance" value="0">
+                    <p>Output balance:</p>
+                    <input type="number" id="outputBalance" value="0" readonly>
+                    <p>Input currency:</p>
+                    <select id="inputCurrency">
+                        <option value="USD">USD</option>
+                    </select>
+                    <button onclick="convertCurrency()">Convert</button>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <script src="scriot.js"></script>
 </body>
+
 </html>

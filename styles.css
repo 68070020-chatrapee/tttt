@@ -1,43 +1,62 @@
+/* ===== NAVBAR ===== */
 nav {
-    background-color:aqua;
+    background-color: aqua;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 00 16px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #0097a7;
 }
 
+/* ===== GENERAL ===== */
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9fb;
 }
 
+/* ===== HEADER ===== */
 .container {
-    /* background-color: brown; */
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 15px 10px;
 }
 
-.texe-group h2,
-.texe-group p {
+.text-group h2,
+.text-group p {
     margin: 0;
+}
+
+.text-group h2 {
+    color: #004d66;
+}
+
+.text-group p {
+    color: #555;
 }
 
 hr {
     border-width: 1px;
     margin: 10px;
+    border-color: #ccc;
 }
 
+/* ===== TEXT AREA ===== */
+#outputBox,
 #box {
-    /* background-color: aqua; */
-    display: flex;
     resize: none;
     width: 95%;
     height: 200px;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-family: monospace;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .boxs {
@@ -46,12 +65,191 @@ hr {
     color: grey;
 }
 
+/* ===== MAIN CONTENT ===== */
 .lowwer {
     margin: 30px;
 }
 
+.toptext {
+    display: flex;
+    flex-direction: row;
+    gap: 320px;
+    color: #004d66;
+}
+
+/* ===== LAYOUT STRUCTURE ===== */
 .b1 {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* ===== LEFT SIDE STRUCTURE ===== */
+.b1left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+
+/* Account Information box */
+.b1lefttop {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: left;
+    gap: 20px;
+    padding: 15px;
+}
+
+.textb {
+    display: flex;
+    flex-direction: column;
+}
+
+.textb p,
+.textb h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Balance Information box */
+.b1leftmid {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    width: 500px;
+}
+
+.textc p,
+.textc h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Bank Operation box */
+.b1leftbottom {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    width: 500px;
+}
+
+/* ===== INPUT STRUCTURE ===== */
+.inputtop {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.inputdonw {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.inall {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== BUTTONS ===== */
+.button1,
+button {
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.button1:hover,
+button:hover {
+    background-color: #0097a7;
+}
+
+/* ===== INPUTS ===== */
+input[type="number"],
+select {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fafafa;
+    width: 120px;
+}
+
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 3px rgba(0, 188, 212, 0.5);
+}
+
+/* ===== CURRENCY CONVERTER (RIGHT SIDE) ===== */
+.b1right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: fit-content;
+}
+
+.b1right img {
+    border-radius: 10px;
+    width : 200px;
+    height : 200px;
+}
+
+.texte {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.texte h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.texte p {
+    margin: 0;
+    color: #333;
+}
+
+/* Inputs and select */
+.texte input,
+.texte select {
+    background-color: #e5e7eb;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    width: 160px;
+}
+
+/* Button */
+.texte button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.texte button:hover {
+    background-color: #2563eb;
 }
